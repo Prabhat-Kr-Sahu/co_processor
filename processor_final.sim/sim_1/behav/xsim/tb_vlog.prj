@@ -1,0 +1,26 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../processor_final.srcs/sources_1/new/src/alu/alu.v" \
+"../../../../processor_final.srcs/sources_1/new/src/control_unit/control_unit.v" \
+"../../../../processor_final.srcs/sources_1/new/src/data_memory_unit/dmu.v" \
+"../../../../processor_final.srcs/sources_1/new/src/stages/dmu_stage.v" \
+"../../../../processor_final.srcs/sources_1/new/src/pipeline_registers/ex_mem_registers.v" \
+"../../../../processor_final.srcs/sources_1/new/src/stages/ex_stage.v" \
+"../../../../processor_final.srcs/sources_1/new/src/forwarding_unit/forwarding_unit.v" \
+"../../../../processor_final.srcs/sources_1/new/src/hazard_detection/hazard_detection_unit.v" \
+"../../../../processor_final.srcs/sources_1/new/src/pipeline_registers/id_ex_register.v" \
+"../../../../processor_final.srcs/sources_1/new/src/stages/id_stage.v" \
+"../../../../processor_final.srcs/sources_1/new/src/pipeline_registers/if_id_registers.v" \
+"../../../../processor_final.srcs/sources_1/new/src/stages/if_stage.v" \
+"../../../../processor_final.srcs/sources_1/new/src/instruction_memory/imu.v" \
+"../../../../processor_final.srcs/sources_1/new/src/pipeline_registers/mem_wb_registers.v" \
+"../../../../processor_final.srcs/sources_1/new/src/register_file/rfu.v" \
+"../../../../processor_final.srcs/sources_1/new/src/top_riscv_module/top_riscv.v" \
+"../../../../processor_final.srcs/sources_1/new/src/stages/write_back.v" \
+"../../../../processor_final.srcs/sim_1/new/testbench.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

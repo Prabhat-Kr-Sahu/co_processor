@@ -1,0 +1,614 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Fri Nov 21 14:35:36 2025
+# Process ID: 21428
+# Current directory: C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.runs/synth_1
+# Command line: vivado.exe -log top_riscv.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_riscv.tcl
+# Log file: C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.runs/synth_1/top_riscv.vds
+# Journal file: C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.runs/synth_1\vivado.jou
+# Running On        :prabhat
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26100
+# Processor Detail  :AMD Ryzen 7 6800H with Radeon Graphics         
+# CPU Frequency     :3194 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :16371 MB
+# Swap memory       :11811 MB
+# Total Virtual     :28182 MB
+# Available Virtual :7936 MB
+#-----------------------------------------------------------
+source top_riscv.tcl -notrace
+create_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 569.590 ; gain = 237.188
+Command: synth_design -top top_riscv -part xc7k70tfbv676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 21360
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1022.723 ; gain = 449.215
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6901] identifier 'is_branch' is used before its declaration [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/stages/ex_stage.v:89]
+WARNING: [Synth 8-6901] identifier 'branch_condition_met' is used before its declaration [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/stages/ex_stage.v:91]
+INFO: [Synth 8-6157] synthesizing module 'top_riscv' [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/top_riscv_module/top_riscv.v:1]
+INFO: [Synth 8-251] TOP DUT >>> internal cycle = x [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/top_riscv_module/top_riscv.v:45]
+INFO: [Synth 8-6157] synthesizing module 'instruction_fetch' [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/stages/if_stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'instruction_memory' [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/instruction_memory/imu.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'instruction_memory' (0#1) [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/instruction_memory/imu.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'instruction_fetch' (0#1) [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/stages/if_stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'if_id_register' [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/pipeline_registers/if_id_registers.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'if_id_register' (0#1) [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/pipeline_registers/if_id_registers.v:2]
+INFO: [Synth 8-6157] synthesizing module 'instruction_decode' [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/stages/id_stage.v:2]
+INFO: [Synth 8-6157] synthesizing module 'register_file' [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/register_file/rfu.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'register_file' (0#1) [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/register_file/rfu.v:2]
+INFO: [Synth 8-6157] synthesizing module 'control_unit' [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/control_unit/control_unit.v:2]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/control_unit/control_unit.v:123]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/control_unit/control_unit.v:156]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/control_unit/control_unit.v:174]
+INFO: [Synth 8-6155] done synthesizing module 'control_unit' (0#1) [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/control_unit/control_unit.v:2]
+INFO: [Synth 8-6157] synthesizing module 'hazard_detection_unit' [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/hazard_detection/hazard_detection_unit.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'hazard_detection_unit' (0#1) [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/hazard_detection/hazard_detection_unit.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'instruction_decode' (0#1) [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/stages/id_stage.v:2]
+WARNING: [Synth 8-7071] port 'ex_mem_branch_resolved' of module 'instruction_decode' is unconnected for instance 'ID_stage' [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/top_riscv_module/top_riscv.v:241]
+WARNING: [Synth 8-7023] instance 'ID_stage' of module 'instruction_decode' has 44 connections declared, but only 43 given [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/top_riscv_module/top_riscv.v:241]
+INFO: [Synth 8-6157] synthesizing module 'id_ex_register' [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/pipeline_registers/id_ex_register.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'id_ex_register' (0#1) [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/pipeline_registers/id_ex_register.v:2]
+INFO: [Synth 8-6157] synthesizing module 'ex_stage' [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/stages/ex_stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'forwarding_unit' [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/forwarding_unit/forwarding_unit.v:2]
+INFO: [Synth 8-251] FORWARD DEBUG: rs1=x rs2=x ex_mem_rd=x mem_wb_rd=x ex_mem_wr=1'bx mem_wb_wr=1'bx [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/forwarding_unit/forwarding_unit.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'forwarding_unit' (0#1) [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/forwarding_unit/forwarding_unit.v:2]
+INFO: [Synth 8-6157] synthesizing module 'pipelined_alu' [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/alu/alu.v:127]
+INFO: [Synth 8-6155] done synthesizing module 'pipelined_alu' (0#1) [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/alu/alu.v:127]
+INFO: [Synth 8-6155] done synthesizing module 'ex_stage' (0#1) [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/stages/ex_stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ex_mem_register' [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/pipeline_registers/ex_mem_registers.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ex_mem_register' (0#1) [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/pipeline_registers/ex_mem_registers.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mem_stage' [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/stages/dmu_stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'data_memory' [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/data_memory_unit/dmu.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/data_memory_unit/dmu.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'data_memory' (0#1) [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/data_memory_unit/dmu.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mem_stage' (0#1) [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/stages/dmu_stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mem_wb_register' [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/pipeline_registers/mem_wb_registers.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'mem_wb_register' (0#1) [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/pipeline_registers/mem_wb_registers.v:2]
+INFO: [Synth 8-6157] synthesizing module 'write_back' [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/stages/write_back.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'write_back' (0#1) [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/stages/write_back.v:1]
+WARNING: [Synth 8-7071] port 'rd_register' of module 'write_back' is unconnected for instance 'WB_stage' [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/top_riscv_module/top_riscv.v:538]
+WARNING: [Synth 8-7023] instance 'WB_stage' of module 'write_back' has 11 connections declared, but only 10 given [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/top_riscv_module/top_riscv.v:538]
+INFO: [Synth 8-6155] done synthesizing module 'top_riscv' (0#1) [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/top_riscv_module/top_riscv.v:1]
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[31] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[30] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[29] driven by constant 0
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[28] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[27] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[26] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[25] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[24] driven by constant 0
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[23] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[22] driven by constant 0
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[21] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[20] driven by constant 0
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[19] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[18] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[17] driven by constant 0
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[16] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[15] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[14] driven by constant 0
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[13] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[12] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[11] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[10] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[9] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[8] driven by constant 0
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[7] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[6] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[5] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[4] driven by constant 0
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[3] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[2] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[1] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[0] driven by constant 1
+WARNING: [Synth 8-7129] Port rd_register[4] in module write_back is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_register[3] in module write_back is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_register[2] in module write_back is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_register[1] in module write_back is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_register[0] in module write_back is either unconnected or has no load
+WARNING: [Synth 8-7129] Port read_addr[31] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port read_addr[30] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port read_addr[29] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port read_addr[28] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port read_addr[27] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port read_addr[26] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port read_addr[25] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port read_addr[24] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port read_addr[23] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port read_addr[22] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port read_addr[21] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port read_addr[20] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port read_addr[19] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port read_addr[18] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port read_addr[17] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port read_addr[16] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port read_addr[15] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port read_addr[14] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port read_addr[13] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port read_addr[12] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port read_addr[11] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port read_addr[10] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port write_addr[31] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port write_addr[30] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port write_addr[29] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port write_addr[28] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port write_addr[27] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port write_addr[26] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port write_addr[25] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port write_addr[24] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port write_addr[23] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port write_addr[22] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port write_addr[21] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port write_addr[20] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port write_addr[19] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port write_addr[18] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port write_addr[17] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port write_addr[16] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port write_addr[15] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port write_addr[14] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port write_addr[13] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port write_addr[12] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port write_addr[11] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port write_addr[10] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module ex_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module ex_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[31] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[30] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[29] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[28] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[27] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[26] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[25] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[24] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[23] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[22] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[21] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[20] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[19] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[18] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[17] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[16] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[15] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[14] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[13] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[12] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[11] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[10] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[9] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[8] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[7] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[6] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[5] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[4] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[3] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[2] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[1] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port branch_target_actual[0] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc_plus_4[31] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc_plus_4[30] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc_plus_4[29] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc_plus_4[28] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc_plus_4[27] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc_plus_4[26] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc_plus_4[25] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc_plus_4[24] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc_plus_4[23] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc_plus_4[22] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc_plus_4[21] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc_plus_4[20] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc_plus_4[19] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc_plus_4[18] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc_plus_4[17] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc_plus_4[16] in module hazard_detection_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc_plus_4[15] in module hazard_detection_unit is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 2056.578 ; gain = 1483.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:34 ; elapsed = 00:00:38 . Memory (MB): peak = 2056.578 ; gain = 1483.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:34 ; elapsed = 00:00:38 . Memory (MB): peak = 2056.578 ; gain = 1483.070
+---------------------------------------------------------------------------------
+INFO: [Device 21-9227] Part: xc7k70tfbv676-1 does not have CEAM library.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:19 ; elapsed = 00:03:21 . Memory (MB): peak = 2197.734 ; gain = 1624.227
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 4     
+	   3 Input   32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 49    
+	                8 Bit    Registers := 1045  
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 6     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 28    
++---Multipliers : 
+	              32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 10    
+	   4 Input   32 Bit        Muxes := 3     
+	   2 Input    8 Bit        Muxes := 5628  
+	   4 Input    8 Bit        Muxes := 1024  
+	   3 Input    8 Bit        Muxes := 383   
+	   7 Input    6 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	   6 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	   4 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   3 Input    4 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 4     
+	   3 Input    2 Bit        Muxes := 1     
+	   6 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 5661  
+	   4 Input    1 Bit        Muxes := 1024  
+	   3 Input    1 Bit        Muxes := 479   
+	   7 Input    1 Bit        Muxes := 5     
+	   8 Input    1 Bit        Muxes := 1     
+	   6 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[31] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[30] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[29] driven by constant 0
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[28] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[27] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[26] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[25] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[24] driven by constant 0
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[23] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[22] driven by constant 0
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[21] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[20] driven by constant 0
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[19] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[18] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[17] driven by constant 0
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[16] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[15] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[14] driven by constant 0
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[13] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[12] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[11] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[10] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[9] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[8] driven by constant 0
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[7] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[6] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[5] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[4] driven by constant 0
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[3] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[2] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[1] driven by constant 1
+WARNING: [Synth 8-3917] design top_riscv has port debug_signature[0] driven by constant 1
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/alu/alu.v:218]
+DSP Report: Generating DSP result0, operation Mode is: A*B.
+DSP Report: operator result0 is absorbed into DSP result0.
+DSP Report: operator result0 is absorbed into DSP result0.
+DSP Report: Generating DSP result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator result0 is absorbed into DSP result0.
+DSP Report: operator result0 is absorbed into DSP result0.
+DSP Report: Generating DSP result0, operation Mode is: A*B.
+DSP Report: operator result0 is absorbed into DSP result0.
+DSP Report: operator result0 is absorbed into DSP result0.
+DSP Report: Generating DSP result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator result0 is absorbed into DSP result0.
+DSP Report: operator result0 is absorbed into DSP result0.
+INFO: [Synth 8-4471] merging register 'ID_EX_reg/lb_out_reg' into 'ID_EX_reg/mem_to_reg_out_reg' [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/pipeline_registers/id_ex_register.v:76]
+INFO: [Synth 8-4471] merging register 'ID_EX_reg/shamt_out_reg[4:0]' into 'ID_EX_reg/rs2_out_reg[4:0]' [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/pipeline_registers/id_ex_register.v:87]
+INFO: [Synth 8-3886] merging instance 'IF_ID_reg/pc_plus_4_out_reg[0]' (FDRE) to 'IF_ID_reg/pc_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX_reg/pc_plus_4_out_reg[0]' (FDR) to 'ID_EX_reg/pc_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[6][0]' (FDRE) to 'IF_stage/imem/memory_reg[9][1]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[9][0]' (FDSE) to 'IF_stage/imem/memory_reg[25][2]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[22][0]' (FDRE) to 'IF_stage/imem/memory_reg[9][1]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[25][0]' (FDRE) to 'IF_stage/imem/memory_reg[9][1]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[34][0]' (FDRE) to 'IF_stage/imem/memory_reg[9][1]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[36][0]' (FDSE) to 'IF_stage/imem/memory_reg[25][2]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[37][0]' (FDRE) to 'IF_stage/imem/memory_reg[9][1]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[44][0]' (FDSE) to 'IF_stage/imem/memory_reg[25][2]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[45][0]' (FDSE) to 'IF_stage/imem/memory_reg[25][2]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[46][0]' (FDRE) to 'IF_stage/imem/memory_reg[9][1]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[62][0]' (FDRE) to 'IF_stage/imem/memory_reg[9][1]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[64][0]' (FDSE) to 'IF_stage/imem/memory_reg[25][2]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[65][0]' (FDSE) to 'IF_stage/imem/memory_reg[25][2]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[70][0]' (FDRE) to 'IF_stage/imem/memory_reg[9][1]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[74][0]' (FDRE) to 'IF_stage/imem/memory_reg[9][1]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[76][0]' (FDSE) to 'IF_stage/imem/memory_reg[25][2]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[77][0]' (FDRE) to 'IF_stage/imem/memory_reg[9][1]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[78][0]' (FDRE) to 'IF_stage/imem/memory_reg[9][1]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[255][0]' (FDRE) to 'IF_stage/imem/memory_reg[9][1]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[79][0]' (FDRE) to 'IF_stage/imem/memory_reg[9][1]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[252][0]' (FDSE) to 'IF_stage/imem/memory_reg[25][2]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[6][1]' (FDRE) to 'IF_stage/imem/memory_reg[9][1]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[9][1]' (FDRE) to 'IF_stage/imem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[22][1]' (FDRE) to 'IF_stage/imem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[25][1]' (FDRE) to 'IF_stage/imem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[34][1]' (FDRE) to 'IF_stage/imem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[36][1]' (FDSE) to 'IF_stage/imem/memory_reg[25][2]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[37][1]' (FDRE) to 'IF_stage/imem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[44][1]' (FDSE) to 'IF_stage/imem/memory_reg[25][2]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[45][1]' (FDRE) to 'IF_stage/imem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[46][1]' (FDRE) to 'IF_stage/imem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[62][1]' (FDRE) to 'IF_stage/imem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[64][1]' (FDSE) to 'IF_stage/imem/memory_reg[25][2]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[65][1]' (FDRE) to 'IF_stage/imem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[70][1]' (FDRE) to 'IF_stage/imem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[74][1]' (FDRE) to 'IF_stage/imem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[76][1]' (FDSE) to 'IF_stage/imem/memory_reg[25][2]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[77][1]' (FDRE) to 'IF_stage/imem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[78][1]' (FDRE) to 'IF_stage/imem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[255][1]' (FDRE) to 'IF_stage/imem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[79][1]' (FDSE) to 'IF_stage/imem/memory_reg[25][2]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[252][1]' (FDSE) to 'IF_stage/imem/memory_reg[25][2]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[6][2]' (FDRE) to 'IF_stage/imem/memory_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[9][2]' (FDRE) to 'IF_stage/imem/memory_reg[9][3]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[22][2]' (FDRE) to 'IF_stage/imem/memory_reg[9][3]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[25][2]' (FDSE) to 'IF_stage/imem/memory_reg[25][4]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[34][2]' (FDRE) to 'IF_stage/imem/memory_reg[9][3]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[36][2]' (FDRE) to 'IF_stage/imem/memory_reg[9][3]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[37][2]' (FDSE) to 'IF_stage/imem/memory_reg[25][4]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[44][2]' (FDSE) to 'IF_stage/imem/memory_reg[25][4]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[45][2]' (FDSE) to 'IF_stage/imem/memory_reg[25][4]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[46][2]' (FDRE) to 'IF_stage/imem/memory_reg[9][3]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[62][2]' (FDRE) to 'IF_stage/imem/memory_reg[9][3]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[64][2]' (FDSE) to 'IF_stage/imem/memory_reg[25][4]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[65][2]' (FDRE) to 'IF_stage/imem/memory_reg[9][3]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[70][2]' (FDRE) to 'IF_stage/imem/memory_reg[9][3]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[74][2]' (FDRE) to 'IF_stage/imem/memory_reg[9][3]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[76][2]' (FDRE) to 'IF_stage/imem/memory_reg[9][3]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[77][2]' (FDSE) to 'IF_stage/imem/memory_reg[25][4]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[78][2]' (FDRE) to 'IF_stage/imem/memory_reg[9][3]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[255][2]' (FDRE) to 'IF_stage/imem/memory_reg[9][3]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[79][2]' (FDSE) to 'IF_stage/imem/memory_reg[25][4]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[252][2]' (FDRE) to 'IF_stage/imem/memory_reg[9][3]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[6][3]' (FDRE) to 'IF_stage/imem/memory_reg[9][3]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[9][3]' (FDRE) to 'IF_stage/imem/memory_reg[9][4]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[22][3]' (FDRE) to 'IF_stage/imem/memory_reg[9][4]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[25][3]' (FDRE) to 'IF_stage/imem/memory_reg[9][4]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[34][3]' (FDRE) to 'IF_stage/imem/memory_reg[9][4]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[36][3]' (FDRE) to 'IF_stage/imem/memory_reg[9][4]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[37][3]' (FDRE) to 'IF_stage/imem/memory_reg[9][4]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[44][3]' (FDSE) to 'IF_stage/imem/memory_reg[25][4]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[45][3]' (FDRE) to 'IF_stage/imem/memory_reg[9][4]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[46][3]' (FDRE) to 'IF_stage/imem/memory_reg[9][4]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[62][3]' (FDRE) to 'IF_stage/imem/memory_reg[9][4]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[64][3]' (FDRE) to 'IF_stage/imem/memory_reg[9][4]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[65][3]' (FDRE) to 'IF_stage/imem/memory_reg[9][4]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[70][3]' (FDRE) to 'IF_stage/imem/memory_reg[9][4]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[74][3]' (FDRE) to 'IF_stage/imem/memory_reg[9][4]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[76][3]' (FDRE) to 'IF_stage/imem/memory_reg[9][4]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[77][3]' (FDRE) to 'IF_stage/imem/memory_reg[9][4]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[78][3]' (FDRE) to 'IF_stage/imem/memory_reg[9][4]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[255][3]' (FDRE) to 'IF_stage/imem/memory_reg[9][4]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[79][3]' (FDRE) to 'IF_stage/imem/memory_reg[9][4]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[252][3]' (FDRE) to 'IF_stage/imem/memory_reg[9][4]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[6][4]' (FDRE) to 'IF_stage/imem/memory_reg[9][4]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[9][4]' (FDRE) to 'IF_stage/imem/memory_reg[9][5]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[22][4]' (FDSE) to 'IF_stage/imem/memory_reg[25][4]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[25][4]' (FDSE) to 'IF_stage/imem/memory_reg[25][7]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[34][4]' (FDRE) to 'IF_stage/imem/memory_reg[9][5]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[36][4]' (FDRE) to 'IF_stage/imem/memory_reg[9][5]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[37][4]' (FDRE) to 'IF_stage/imem/memory_reg[9][5]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[44][4]' (FDRE) to 'IF_stage/imem/memory_reg[9][5]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[45][4]' (FDRE) to 'IF_stage/imem/memory_reg[9][5]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[46][4]' (FDRE) to 'IF_stage/imem/memory_reg[9][5]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[62][4]' (FDRE) to 'IF_stage/imem/memory_reg[9][5]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[64][4]' (FDRE) to 'IF_stage/imem/memory_reg[9][5]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[65][4]' (FDRE) to 'IF_stage/imem/memory_reg[9][5]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/memory_reg[70][4]' (FDSE) to 'IF_stage/imem/memory_reg[25][7]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (IF_stage/\imem/memory_reg[76][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (IF_stage/\imem/memory_reg[252][7] )
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin forwardB[0] with 1st driver pin 'EX_stage/fu/forwardB_inferred/forwardB_reg[0]' [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/forwarding_unit/forwarding_unit.v:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin forwardB[0] with 2nd driver pin 'GND' [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/forwarding_unit/forwarding_unit.v:58]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net forwardB[0] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sources_1/new/src/forwarding_unit/forwarding_unit.v:58]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:04:50 ; elapsed = 00:05:30 . Memory (MB): peak = 2259.574 ; gain = 1686.066
+---------------------------------------------------------------------------------
+ Sort Area is top_riscv__GC0 result0_0 : 0 0 : 3101 5879 : Used 1 time 0
+ Sort Area is top_riscv__GC0 result0_0 : 0 1 : 2778 5879 : Used 1 time 0
+ Sort Area is top_riscv__GC0 result0_3 : 0 0 : 2759 5418 : Used 1 time 0
+ Sort Area is top_riscv__GC0 result0_3 : 0 1 : 2659 5418 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++--------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name   | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|pipelined_alu | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pipelined_alu | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pipelined_alu | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pipelined_alu | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++--------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:04:53 ; elapsed = 00:05:33 . Memory (MB): peak = 2259.574 ; gain = 1686.066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:05:01 ; elapsed = 00:05:41 . Memory (MB): peak = 2259.574 ; gain = 1686.066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:05:15 ; elapsed = 00:05:55 . Memory (MB): peak = 2259.574 ; gain = 1686.066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:05:15 ; elapsed = 00:05:56 . Memory (MB): peak = 2259.574 ; gain = 1686.066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:17 ; elapsed = 00:05:58 . Memory (MB): peak = 2259.574 ; gain = 1686.066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:05:18 ; elapsed = 00:05:59 . Memory (MB): peak = 2259.574 ; gain = 1686.066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:05:22 ; elapsed = 00:06:03 . Memory (MB): peak = 2259.574 ; gain = 1686.066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:05:22 ; elapsed = 00:06:03 . Memory (MB): peak = 2259.574 ; gain = 1686.066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++--------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name   | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|pipelined_alu | A*B          | 17     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pipelined_alu | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pipelined_alu | PCIN>>17+A*B | 17     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++--------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |    94|
+|3     |DSP48E1 |     3|
+|4     |LUT1    |     2|
+|5     |LUT2    |  1219|
+|6     |LUT3    |   991|
+|7     |LUT4    |  2545|
+|8     |LUT5    |  8822|
+|9     |LUT6    | 28448|
+|10    |MUXF7   |  4630|
+|11    |MUXF8   |  2184|
+|12    |FDRE    | 10062|
+|13    |IBUF    |     2|
+|14    |OBUF    |   392|
++------+--------+------+
+
+Report Instance Areas: 
++------+-------------+-------------------+------+
+|      |Instance     |Module             |Cells |
++------+-------------+-------------------+------+
+|1     |top          |                   | 59395|
+|2     |  EX_MEM_reg |ex_mem_register    | 31481|
+|3     |  EX_stage   |ex_stage           |    74|
+|4     |    alu      |pipelined_alu      |    74|
+|5     |  ID_EX_reg  |id_ex_register     |  1190|
+|6     |  ID_stage   |instruction_decode |  1824|
+|7     |    rfu      |register_file      |  1824|
+|8     |  IF_ID_reg  |if_id_register     |   198|
+|9     |  IF_stage   |instruction_fetch  |   108|
+|10    |  MEM_WB_reg |mem_wb_register    |   624|
+|11    |  MEM_stage  |mem_stage          | 23460|
+|12    |    dmu      |data_memory        | 23460|
++------+-------------+-------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:05:23 ; elapsed = 00:06:03 . Memory (MB): peak = 2259.574 ; gain = 1686.066
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 3 critical warnings and 324 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:05:23 ; elapsed = 00:06:04 . Memory (MB): peak = 2259.574 ; gain = 1686.066
+Synthesis Optimization Complete : Time (s): cpu = 00:05:23 ; elapsed = 00:06:04 . Memory (MB): peak = 2259.574 ; gain = 1686.066
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.532 . Memory (MB): peak = 2259.574 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 6911 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 2259.574 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 69c7693f
+INFO: [Common 17-83] Releasing license: Synthesis
+161 Infos, 170 Warnings, 3 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:05:35 ; elapsed = 00:06:17 . Memory (MB): peak = 2259.574 ; gain = 1689.984
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 2259.574 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.runs/synth_1/top_riscv.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2259.574 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_utilization -file top_riscv_utilization_synth.rpt -pb top_riscv_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 21 14:42:32 2025...

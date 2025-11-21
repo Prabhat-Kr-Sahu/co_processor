@@ -1,0 +1,182 @@
+Time resolution is 1 ps
+================================================================
+        BRANCH/JUMP/JALR PROCESSOR VERIFICATION
+================================================================
+Testing: BEQ, BNE, JAL, JALR instructions
+================================================================
+TOP DUT >>> internal cycle = x
+FORWARD DEBUG: rs1= 0 rs2= 0 ex_mem_rd= 0 mem_wb_rd= 0 ex_mem_wr=0 mem_wb_wr=0
+TOP DUT >>> internal cycle = 0
+TOP DUT >>> internal cycle = 0
+TOP DUT >>> internal cycle = 0
+TOP DUT >>> internal cycle = 0
+TOP DUT >>> internal cycle = 0
+TOP DUT >>> internal cycle = 0
+TOP DUT >>> internal cycle = 0
+TOP DUT >>> internal cycle = 0
+TOP DUT >>> internal cycle = 0
+PC_DEBUG: old_pc=00000000, pc_plus_4=00000004, next_pc=00000004, branch_taken=0, jump_taken=0, jalr_taken=0, branch_target=00000000, stall_pc=0
+TOP DUT >>> internal cycle = 1
+PC_DEBUG: old_pc=00000004, pc_plus_4=00000008, next_pc=00000008, branch_taken=0, jump_taken=0, jalr_taken=0, branch_target=00000000, stall_pc=0
+FORWARD DEBUG: rs1= 0 rs2=10 ex_mem_rd= 0 mem_wb_rd= 0 ex_mem_wr=0 mem_wb_wr=0
+TOP DUT >>> internal cycle = 2
+PC_DEBUG: old_pc=00000008, pc_plus_4=0000000c, next_pc=0000000c, branch_taken=0, jump_taken=0, jalr_taken=0, branch_target=00000000, stall_pc=0
+FORWARD DEBUG: rs1= 0 rs2=10 ex_mem_rd= 1 mem_wb_rd= 0 ex_mem_wr=1 mem_wb_wr=0
+TOP DUT >>> internal cycle = 3
+PC_DEBUG: old_pc=0000000c, pc_plus_4=00000010, next_pc=00000010, branch_taken=0, jump_taken=0, jalr_taken=0, branch_target=00000004, stall_pc=0
+FORWARD DEBUG: rs1= 0 rs2= 5 ex_mem_rd= 2 mem_wb_rd= 1 ex_mem_wr=1 mem_wb_wr=1
+C  5 | PC=00000010 | r1=00000000 | r2=00000000 | r9=00000000 | r10=00000000
+TOP DUT >>> internal cycle = 4
+PC_DEBUG: old_pc=00000010, pc_plus_4=00000014, next_pc=00000014, branch_taken=0, jump_taken=0, jalr_taken=0, branch_target=00000008, stall_pc=0
+FORWARD DEBUG: rs1= 1 rs2= 2 ex_mem_rd= 3 mem_wb_rd= 2 ex_mem_wr=1 mem_wb_wr=1
+
+--- TEST 1: BASIC FUNCTIONALITY ---
+âœ“ Debug signature correct
+
+--- BRANCH/JUMP/JALR MONITORING STARTED ---
+Watching for instruction execution and PC changes...
+TOP DUT >>> internal cycle = 5
+PC_DEBUG: old_pc=00000014, pc_plus_4=00000018, next_pc=00000018, branch_taken=0, jump_taken=0, jalr_taken=0, branch_target=0000000c, stall_pc=0
+BRANCH DEBUG: PC=0000000c, imm=00000008, target=00000010, condition=0
+FORWARD DEBUG: rs1= 0 rs2= 3 ex_mem_rd= 8 mem_wb_rd= 3 ex_mem_wr=0 mem_wb_wr=1
+TOP DUT >>> internal cycle = 6
+PC_DEBUG: old_pc=00000018, pc_plus_4=0000001c, next_pc=0000001c, branch_taken=0, jump_taken=0, jalr_taken=0, branch_target=00000010, stall_pc=0
+FORWARD DEBUG: rs1= 0 rs2= 1 ex_mem_rd= 9 mem_wb_rd= 8 ex_mem_wr=1 mem_wb_wr=0
+TOP DUT >>> internal cycle = 7
+PC_DEBUG: old_pc=0000001c, pc_plus_4=00000020, next_pc=00000020, branch_taken=0, jump_taken=0, jalr_taken=0, branch_target=00000014, stall_pc=0
+FORWARD DEBUG: rs1= 1 rs2= 3 ex_mem_rd= 9 mem_wb_rd= 9 ex_mem_wr=1 mem_wb_wr=1
+TOP DUT >>> internal cycle = 8
+PC_DEBUG: old_pc=00000020, pc_plus_4=00000024, next_pc=00000024, branch_taken=0, jump_taken=0, jalr_taken=0, branch_target=00000018, stall_pc=0
+BRANCH DEBUG: PC=00000018, imm=00000008, target=00000020, condition=1
+FORWARD DEBUG: rs1= 0 rs2= 3 ex_mem_rd= 8 mem_wb_rd= 9 ex_mem_wr=0 mem_wb_wr=1
+C 10 | PC=00000024 | r1=0000000a | r2=0000000a | r9=00000063 | r10=00000000
+TOP DUT >>> internal cycle = 9
+PC_DEBUG: old_pc=00000024, pc_plus_4=00000028, next_pc=00000020, branch_taken=1, jump_taken=0, jalr_taken=0, branch_target=00000020, stall_pc=0
+FORWARD DEBUG: rs1= 0 rs2= 2 ex_mem_rd= 9 mem_wb_rd= 8 ex_mem_wr=1 mem_wb_wr=0
+
+--- TEST 2: BEQ TAKEN ---
+BEQ r1, r2 should branch when r1=r2=10
+âœ“ BEQ taken correctly: r9 =          1 (cycle         11)
+  Branch jumped from PC=0x0C to PC=0x14
+TOP DUT >>> internal cycle = 10
+PC_DEBUG: old_pc=00000020, pc_plus_4=00000024, next_pc=00000024, branch_taken=0, jump_taken=0, jalr_taken=0, branch_target=00000020, stall_pc=0
+FORWARD DEBUG: rs1= 1 rs2= 3 ex_mem_rd= 9 mem_wb_rd= 9 ex_mem_wr=1 mem_wb_wr=1
+TOP DUT >>> internal cycle = 11
+PC_DEBUG: old_pc=00000024, pc_plus_4=00000028, next_pc=00000028, branch_taken=0, jump_taken=0, jalr_taken=0, branch_target=00000024, stall_pc=0
+BRANCH DEBUG: PC=00000024, imm=00000008, target=00000028, condition=0
+FORWARD DEBUG: rs1= 0 rs2= 2 ex_mem_rd= 8 mem_wb_rd= 9 ex_mem_wr=0 mem_wb_wr=1
+TOP DUT >>> internal cycle = 12
+PC_DEBUG: old_pc=00000028, pc_plus_4=0000002c, next_pc=0000002c, branch_taken=0, jump_taken=0, jalr_taken=0, branch_target=00000028, stall_pc=0
+FETCH DEBUG: PC=00000028, instruction=00300493, branch_taken=0
+FORWARD DEBUG: rs1= 1 rs2= 3 ex_mem_rd= 9 mem_wb_rd= 8 ex_mem_wr=1 mem_wb_wr=0
+
+--- TEST 3: BNE TAKEN ---
+BNE r1, r3 should branch when r1=10, r3=5
+âœ“ BNE taken correctly: r9 =          2 (cycle         14)
+  Branch jumped from PC=0x18 to PC=0x20
+TOP DUT >>> internal cycle = 13
+PC_DEBUG: old_pc=0000002c, pc_plus_4=00000030, next_pc=00000030, branch_taken=0, jump_taken=0, jalr_taken=0, branch_target=00000024, stall_pc=0
+FETCH DEBUG: PC=0000002c, instruction=00c0056f, branch_taken=0
+BRANCH DEBUG: PC=00000024, imm=00000008, target=00000028, condition=0
+FORWARD DEBUG: rs1= 0 rs2= 3 ex_mem_rd= 8 mem_wb_rd= 9 ex_mem_wr=0 mem_wb_wr=1
+C 15 | PC=00000030 | r1=0000000a | r2=0000000a | r9=00000002 | r10=00000000
+TOP DUT >>> internal cycle = 14
+PC_DEBUG: old_pc=00000030, pc_plus_4=00000034, next_pc=00000034, branch_taken=0, jump_taken=0, jalr_taken=0, branch_target=00000028, stall_pc=0
+FETCH DEBUG: PC=00000030, instruction=06300493, branch_taken=0
+DECODE DEBUG: PC=0x2C, opcode=1101111, rd=10, jump=1, instruction=00c0056f
+FORWARD DEBUG: rs1= 0 rs2=12 ex_mem_rd= 9 mem_wb_rd= 8 ex_mem_wr=1 mem_wb_wr=0
+TOP DUT >>> internal cycle = 15
+PC_DEBUG: old_pc=00000034, pc_plus_4=00000038, next_pc=00000038, branch_taken=0, jump_taken=0, jalr_taken=0, branch_target=0000002c, stall_pc=0
+BRANCH DEBUG: PC=0000002c, imm=0000000c, target=00000038, condition=1
+FORWARD DEBUG: rs1= 0 rs2= 3 ex_mem_rd=10 mem_wb_rd= 9 ex_mem_wr=1 mem_wb_wr=1
+TOP DUT >>> internal cycle = 16
+PC_DEBUG: old_pc=00000038, pc_plus_4=0000003c, next_pc=00000038, branch_taken=1, jump_taken=0, jalr_taken=0, branch_target=00000038, stall_pc=0
+FORWARD DEBUG: rs1= 0 rs2= 3 ex_mem_rd= 9 mem_wb_rd=10 ex_mem_wr=1 mem_wb_wr=1
+
+--- TEST 4: BEQ NOT TAKEN ---
+BEQ r1, r3 should NOT branch when r1=10, r3=5
+âœ“ BEQ not taken correctly: r9 =          3 (cycle         18)
+  Continued to next instruction at PC=0x28
+TOP DUT >>> internal cycle = 17
+PC_DEBUG: old_pc=00000038, pc_plus_4=0000003c, next_pc=0000003c, branch_taken=0, jump_taken=0, jalr_taken=0, branch_target=00000034, stall_pc=0
+REG DEBUG: Writing to r10: data=00000030
+FORWARD DEBUG: rs1= 0 rs2= 4 ex_mem_rd= 9 mem_wb_rd= 9 ex_mem_wr=1 mem_wb_wr=1
+TOP DUT >>> internal cycle = 18
+PC_DEBUG: old_pc=0000003c, pc_plus_4=00000040, next_pc=00000040, branch_taken=0, jump_taken=0, jalr_taken=0, branch_target=00000038, stall_pc=0
+C 20 | PC=00000040 | r1=0000000a | r2=0000000a | r9=00000063 | r10=00000030
+TOP DUT >>> internal cycle = 19
+PC_DEBUG: old_pc=00000040, pc_plus_4=00000044, next_pc=00000044, branch_taken=0, jump_taken=0, jalr_taken=0, branch_target=0000003c, stall_pc=0
+FORWARD DEBUG: rs1= 0 rs2= 8 ex_mem_rd= 9 mem_wb_rd= 9 ex_mem_wr=1 mem_wb_wr=1
+TOP DUT >>> internal cycle = 20
+PC_DEBUG: old_pc=00000044, pc_plus_4=00000048, next_pc=00000048, branch_taken=0, jump_taken=0, jalr_taken=0, branch_target=0000003c, stall_pc=0
+FORWARD DEBUG: rs1= 1 rs2= 0 ex_mem_rd= 1 mem_wb_rd= 9 ex_mem_wr=1 mem_wb_wr=1
+FORWARD A: EX->EX forwarding for rs1= 1
+
+--- TEST 5: JAL (Jump and Link) ---
+JAL r10, 12 should jump and save return address
+âœ“ JAL executed correctly: r9 =          4 (cycle         22)
+  Jumped from PC=0x2C to PC=0x38
+âœ“ JAL return address correct: r10 = 00000030
+TOP DUT >>> internal cycle = 21
+PC_DEBUG: old_pc=00000048, pc_plus_4=0000004c, next_pc=0000004c, branch_taken=0, jump_taken=0, jalr_taken=0, branch_target=00000040, stall_pc=0
+BRANCH DEBUG: PC=00000040, imm=00000000, target=00000048, condition=1
+FORWARD DEBUG: rs1= 0 rs2= 3 ex_mem_rd= 2 mem_wb_rd= 1 ex_mem_wr=1 mem_wb_wr=1
+TOP DUT >>> internal cycle = 22
+PC_DEBUG: old_pc=0000004c, pc_plus_4=00000050, next_pc=00000048, branch_taken=1, jump_taken=0, jalr_taken=0, branch_target=00000048, stall_pc=0
+FORWARD DEBUG: rs1= 0 rs2= 5 ex_mem_rd= 9 mem_wb_rd= 2 ex_mem_wr=1 mem_wb_wr=1
+TOP DUT >>> internal cycle = 23
+PC_DEBUG: old_pc=00000048, pc_plus_4=0000004c, next_pc=0000004c, branch_taken=0, jump_taken=0, jalr_taken=0, branch_target=00000048, stall_pc=0
+FORWARD DEBUG: rs1= 0 rs2= 4 ex_mem_rd= 9 mem_wb_rd= 9 ex_mem_wr=1 mem_wb_wr=1
+C 25 | PC=0000004c | r1=00000048 | r2=00000044 | r9=00000004 | r10=00000030
+TOP DUT >>> internal cycle = 24
+PC_DEBUG: old_pc=0000004c, pc_plus_4=00000050, next_pc=00000050, branch_taken=0, jump_taken=0, jalr_taken=0, branch_target=0000004c, stall_pc=0
+FORWARD DEBUG: rs1= 0 rs2= 5 ex_mem_rd= 9 mem_wb_rd= 9 ex_mem_wr=1 mem_wb_wr=1
+TOP DUT >>> internal cycle = 25
+PC_DEBUG: old_pc=00000050, pc_plus_4=00000054, next_pc=00000054, branch_taken=0, jump_taken=0, jalr_taken=0, branch_target=00000050, stall_pc=0
+FORWARD DEBUG: rs1= 0 rs2= 4 ex_mem_rd= 9 mem_wb_rd= 9 ex_mem_wr=1 mem_wb_wr=1
+
+--- TEST 6: JALR (Jump and Link Register) ---
+JALR r2, r1, 0 should jump to r1 and save return address
+âœ“ JALR executed correctly: r9 =          5 (cycle         27)
+  Jumped to address stored in r1 (0x48)
+âœ“ JALR return address correct: r2 = 00000044
+
+*** ALL BRANCH/JUMP TESTS COMPLETED ***
+TOP DUT >>> internal cycle = 26
+PC_DEBUG: old_pc=00000054, pc_plus_4=00000058, next_pc=00000058, branch_taken=0, jump_taken=0, jalr_taken=0, branch_target=0000004c, stall_pc=0
+FORWARD DEBUG: rs1= 0 rs2= 0 ex_mem_rd= 9 mem_wb_rd= 9 ex_mem_wr=1 mem_wb_wr=1
+TOP DUT >>> internal cycle = 27
+PC_DEBUG: old_pc=00000058, pc_plus_4=0000005c, next_pc=0000005c, branch_taken=0, jump_taken=0, jalr_taken=0, branch_target=00000050, stall_pc=0
+FORWARD DEBUG: rs1= 0 rs2= 0 ex_mem_rd= 0 mem_wb_rd= 9 ex_mem_wr=1 mem_wb_wr=1
+
+================================================================
+              BRANCH/JUMP/JALR TEST REPORT
+================================================================
+Total Cycles:         27
+Total Tests:          6
+Tests Passed:         6
+Tests Failed:         0
+Success Rate:         100.0%
+
+Test Completion Status:
+  BEQ Taken:             ÿÿ“ DONE
+  BNE Taken:             ÿÿ“ DONE
+  BEQ Not Taken:         ÿÿ“ DONE
+  JAL:                   ÿÿ“ DONE
+  JALR:                  ÿÿ“ DONE
+
+ğŸ‰ *** ALL BRANCH/JUMP TESTS PASSED *** ğŸ‰
+
+âœ… BEQ (taken) working correctly
+âœ… BNE (taken) working correctly
+âœ… BEQ (not taken) working correctly
+âœ… JAL working correctly
+âœ… JALR working correctly
+âœ… Branch prediction and flushing working
+âœ… Pipeline control hazard handling working
+
+ğŸ† BRANCH/JUMP PROCESSOR FULLY VERIFIED! ğŸ†
+================================================================
+Test completed at: 375000 ns
+================================================================
+$finish called at time : 375 ns : File "C:/Users/prabh/OneDrive/Desktop/assignments/CO/processor0/processor_final/processor_final.srcs/sim_1/new/testbench.v" Line 153
